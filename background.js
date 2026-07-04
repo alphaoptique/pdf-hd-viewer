@@ -1,4 +1,5 @@
-chrome.action.onClicked.addListener((tab) => {
-  const viewerUrl = chrome.runtime.getURL("viewer.html") + "?file=" + tab.url;
-  chrome.tabs.create({ url: viewerUrl });
+chrome.action.onClicked.addListener(() => {
+  chrome.tabs.create({
+    url: chrome.runtime.getURL("viewer.html")
+  });
 });
